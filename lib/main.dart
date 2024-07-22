@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_musicplayer/core/configs/theme/app_theme.dart';
+import 'package:flutter_musicplayer/presentation/splash/pages/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: AppTheme.darkTheme,
-      home: Container()
+      debugShowCheckedModeBanner: false,
+      home: const SplashPage()
     );
   }
 }
