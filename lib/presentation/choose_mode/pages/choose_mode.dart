@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_musicplayer/common/widgets/button/basic_app_button.dart';
 import 'package:flutter_musicplayer/core/configs/assets/app_vectors.dart';
 import 'package:flutter_musicplayer/core/configs/theme/app_colors.dart';
+import 'package:flutter_musicplayer/presentation/auth/pages/signup_signin.dart';
 import 'package:flutter_musicplayer/presentation/choose_mode/bloc/theme_cubit.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -121,11 +122,11 @@ class ChooseModePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => const ChooseModePage()
+                        builder: (BuildContext context) => const SignupSigninPage()
                       )
                     );
                   },
-                  title: 'Sign up'
+                  title: 'Continue'
                 )
               ],
             ),
