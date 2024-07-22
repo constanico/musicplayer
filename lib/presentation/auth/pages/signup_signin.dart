@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_musicplayer/common/helpers/is_dark_mode.dart';
 import 'package:flutter_musicplayer/common/widgets/button/basic_app_button.dart';
 import 'package:flutter_musicplayer/common/widgets/button/outline_app_button.dart';
 import 'package:flutter_musicplayer/core/configs/assets/app_vectors.dart';
@@ -33,12 +34,12 @@ class SignupSigninPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 21,),
-                  const Text(
+                  Text(
                     'Listen your favorite music here only in Spotify, Sign Up or Sign in Now',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 13,
-                      color: AppColors.grey
+                      color: context.isDarkMode ? Colors.grey : AppColors.darkGrey
                     ),
                     textAlign: TextAlign.center,
                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_musicplayer/common/helpers/is_dark_mode.dart';
 import 'package:flutter_musicplayer/common/widgets/button/basic_app_button.dart';
 import 'package:flutter_musicplayer/core/configs/assets/app_vectors.dart';
 import 'package:flutter_musicplayer/core/configs/theme/app_colors.dart';
@@ -27,20 +28,20 @@ class GetStartedPage extends StatelessWidget {
                     ),
                 ),
                 const Spacer(),
-                const Text(
+                Text(
                   'Enjoy Listening to Music',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: context.isDarkMode ? Colors.white : AppColors.darkGrey,
                     fontSize: 18
                   ),
                 ),
                 const SizedBox(height: 21,),
-                const Text(
+                Text(
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis enim purus sed phasellus. Cursus ornare id scelerisque aliquam.',
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
-                    color: AppColors.grey,
+                    color: context.isDarkMode ? AppColors.grey : AppColors.darkGrey,
                     fontSize: 13
                   ),
                   textAlign: TextAlign.center,

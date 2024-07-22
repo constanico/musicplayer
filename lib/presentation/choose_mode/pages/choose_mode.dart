@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_musicplayer/common/helpers/is_dark_mode.dart';
 import 'package:flutter_musicplayer/common/widgets/button/basic_app_button.dart';
 import 'package:flutter_musicplayer/core/configs/assets/app_vectors.dart';
 import 'package:flutter_musicplayer/core/configs/theme/app_colors.dart';
@@ -31,11 +32,11 @@ class ChooseModePage extends StatelessWidget {
                     ),
                 ),
                 const Spacer(),
-                const Text(
+                Text(
                   'Choose Mode',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: context.isDarkMode ? Colors.white : AppColors.darkGrey,
                     fontSize: 18
                   ),
                 ),
