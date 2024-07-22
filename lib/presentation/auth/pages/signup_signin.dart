@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_musicplayer/common/helpers/is_dark_mode.dart';
+import 'package:flutter_musicplayer/common/widgets/appbar/app_bar.dart';
 import 'package:flutter_musicplayer/common/widgets/button/basic_app_button.dart';
 import 'package:flutter_musicplayer/common/widgets/button/outline_app_button.dart';
 import 'package:flutter_musicplayer/core/configs/assets/app_vectors.dart';
@@ -14,6 +15,7 @@ class SignupSigninPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
+          const BasicAppbar(),
           Align(
             alignment: Alignment.center,
             child: Padding(
