@@ -5,6 +5,8 @@ import 'package:flutter_musicplayer/common/widgets/button/basic_app_button.dart'
 import 'package:flutter_musicplayer/common/widgets/button/outline_app_button.dart';
 import 'package:flutter_musicplayer/core/configs/assets/app_vectors.dart';
 import 'package:flutter_musicplayer/core/configs/theme/app_colors.dart';
+import 'package:flutter_musicplayer/presentation/auth/pages/signin.dart';
+import 'package:flutter_musicplayer/presentation/auth/pages/signup.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SignupSigninPage extends StatelessWidget {
@@ -51,7 +53,14 @@ class SignupSigninPage extends StatelessWidget {
                       Expanded(
                         flex: 1,
                         child: BasicAppButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context, 
+                              MaterialPageRoute(
+                                builder: (BuildContext context) => const SignUpPage()
+                              )
+                            );
+                          },
                           title: 'Register',
                         )
                       ),
@@ -59,7 +68,14 @@ class SignupSigninPage extends StatelessWidget {
                       Expanded(
                         flex: 1,
                         child: OutlineAppButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context, 
+                              MaterialPageRoute(
+                                builder: (BuildContext context) => const SignInPage()
+                              )
+                            );
+                          },
                           title: 'Sign In',
                         )
                       ),
