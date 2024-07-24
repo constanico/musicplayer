@@ -21,11 +21,16 @@ class GetStartedPage extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: SvgPicture.asset(
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 20,
+                  ),
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: SvgPicture.asset(
                       AppVectors.logo
                     ),
+                  ),
                 ),
                 const Spacer(),
                 Text(
