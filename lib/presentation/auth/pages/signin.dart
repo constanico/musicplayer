@@ -50,13 +50,13 @@ class SignInPage extends StatelessWidget {
                 );
                 result.fold(
                   (l) {
-                    var snackbar = SnackBar(content: Text(l));
+                    var snackbar = SnackBar(content: Text(l), behavior: SnackBarBehavior.floating,);
                     ScaffoldMessenger.of(context).showSnackBar(snackbar);
                   },
                   (r) {
                     Navigator.pushAndRemoveUntil(
                       context,
-                      MaterialPageRoute(builder: (BuildContext context) => const RootPage()), 
+                      MaterialPageRoute(builder: (BuildContext context) => RootPage()), 
                       (route) => false
                     );
                   }
