@@ -4,8 +4,10 @@ import 'package:flutter_musicplayer/core/configs/theme/app_colors.dart';
 
 class BasicAppbar extends StatelessWidget implements PreferredSizeWidget {
   final Widget ? title;
+  final bool hideBack;
   const BasicAppbar({
     this.title,
+    this.hideBack = false,
     super.key
   });
 
@@ -16,7 +18,7 @@ class BasicAppbar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       centerTitle: true,
       title: title ?? const Text(''),
-      leading: IconButton(
+      leading: hideBack ? null : IconButton(
         onPressed: () {
           Navigator.pop(context);
         },
